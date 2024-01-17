@@ -1,6 +1,6 @@
 {
   "name": "vite-plugin-required-component",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "must components",
   "keywords": [
     "tools"
@@ -16,11 +16,11 @@
   "exports": {
     ".": {
       "require": "./dist/index.cjs",
-      "import": "./dist/index.mjs"
+      "import": "./dist/index.js"
     }
   },
   "main": "./dist/index.cjs",
-  "module": "./dist/index.mjs",
+  "module": "./dist/index.js",
   "types": "./dist/index.d.ts",
   "files": [
     "dist"
