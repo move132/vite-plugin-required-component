@@ -1,0 +1,26 @@
+{ 
+    "compilerOptions":  { 
+        "sourceMap": true,
+		"moduleResolution": "node",
+		"baseUrl": ".",
+		"noUnusedLocals": true,
+		"noUnusedParameters": true,
+		"resolveJsonModule": true,
+		"esModuleInterop": true,
+		"lib": ["esnext", "dom"],
+		"typeRoots": [
+			"node_modules/@types"
+		],
+		"paths": {
+			"@/*": ["./src/*"],
+			"@/types/*": ["./types/*"]
+		}
+    },
+    "typeRoots": [
+        "node_modules/@types"
+    ],
+    "include": [ 
+        "src/**/*.ts"
+    ],
+    "exclude": ["node_modules", "dist"]
+}

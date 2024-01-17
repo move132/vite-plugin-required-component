@@ -1,0 +1,71 @@
+{
+  "name": "vite-plugin-required-component",
+  "version": "1.0.0",
+  "description": "",
+  "keywords": [
+    "tools"
+  ],
+  "homepage": "https://github.com/dense-labs/tool-template",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/dense-labs/tool-template"
+  },
+  "license": "MIT",
+  "author": "move11@126.com",
+  "type": "module",
+  "exports": {
+    ".": {
+      "require": "./dist/index.cjs",
+      "import": "./dist/index.mjs"
+    }
+  },
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "rollup -c",
+    "dev": "rollup -c -w",
+    "lint": "eslint --ext .js,.vue,.ts src",
+    "release": "rollup -c && release-it",
+    "tsup": "tsup"
+  },
+  "dependencies": {
+    "@dense-labs/eslint-config-ts": "^1.0.1",
+    "@dense-labs/utils": "^1.0.9"
+  },
+  "devDependencies": {
+    "@rollup/plugin-commonjs": "^24.0.1",
+    "@rollup/plugin-json": "^6.0.0",
+    "@rollup/plugin-multi-entry": "^6.0.0",
+    "@rollup/plugin-node-resolve": "^15.0.2",
+    "@rollup/plugin-terser": "^0.4.3",
+    "@rollup/plugin-typescript": "^11.1.0",
+    "@typescript-eslint/eslint-plugin": "^5.58.0",
+    "@typescript-eslint/parser": "^5.58.0",
+    "eslint": "^8.38.0",
+    "eslint-config-prettier": "^8.8.0",
+    "eslint-plugin-import": "^2.27.5",
+    "eslint-plugin-prettier": "^4.2.1",
+    "eslint-plugin-vue": "^9.11.0",
+    "esno": "^0.16.3",
+    "globby": "^10.0.2",
+    "prettier": "^2.8.7",
+    "release-it": "^15.10.0",
+    "rollup": "^3.25.3",
+    "rollup-plugin-injectnote": "^1.0.1",
+    "tsup": "^6.7.0",
+    "typescript": "^5.0.4",
+    "vitest": "^0.30.1"
+  },
+  "engines": {
+    "node": ">= 12.15.0",
+    "npm": ">= 6.13.4"
+  },
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org"
+  }
+}
