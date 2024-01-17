@@ -1,2 +1,2 @@
-# tool-tempalte
-tool repository tempalte
+# vite-plugin-required-component
+must components

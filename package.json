@@ -1,7 +1,7 @@
 {
   "name": "vite-plugin-required-component",
-  "version": "1.0.0",
-  "description": "",
+  "version": "0.0.1",
+  "description": "must components",
   "keywords": [
     "tools"
   ],
