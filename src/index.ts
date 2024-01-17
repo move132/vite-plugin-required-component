@@ -74,12 +74,12 @@ export async function createRequiredComponent(options: FileOptions = {}) {
 			if (id.endsWith('.vue')) {
 				if (absolutePaths.includes(id.replace(/\//g, '\\'))) {
 					if (isTemplateComponent(code)) {
-						const regex = new RegExp(`<${options.name}[^>]*>|</${options.name}>`, 'g')
+						const regex = new RegExp(`<${option.name}[^>]*>|</${option.name}>`, 'g')
 						const hasComponent = code.match(regex)
 						if (!hasComponent) {
 							// eslint-disable-next-line @typescript-eslint/ban-ts-comment
 							// @ts-ignore
-							this.error(`【${id}】必须包含${options.name}组件`)
+							this.error(`【${id}】必须包含${option.name}组件`)
 						}
 					}
 				}

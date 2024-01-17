@@ -3,8 +3,8 @@ import {defineConfig} from 'tsup'
 export default defineConfig({
 	dts: true,
 	clean: true,
-	minify: true,
-	splitting: true,
+	// minify: true,
+	// splitting: true,
 	outDir: 'dist',
 	format: ['cjs', 'esm'],
 	globalName: 'denseLabs',
