@@ -1,6 +1,6 @@
 {
   "name": "vite-plugin-required-component",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "must components",
   "keywords": [
     "tools"
@@ -33,10 +33,11 @@
     "tsup": "tsup"
   },
   "dependencies": {
-    "@dense-labs/eslint-config-ts": "^1.0.1",
-    "@dense-labs/utils": "^1.0.9"
+    "globby": "^10.0.2"
   },
   "devDependencies": {
+    "@dense-labs/eslint-config-ts": "^1.0.1",
+    "@dense-labs/utils": "^1.0.9",
     "@rollup/plugin-commonjs": "^24.0.1",
     "@rollup/plugin-json": "^6.0.0",
     "@rollup/plugin-multi-entry": "^6.0.0",
@@ -51,7 +52,6 @@
     "eslint-plugin-prettier": "^4.2.1",
     "eslint-plugin-vue": "^9.11.0",
     "esno": "^0.16.3",
-    "globby": "^10.0.2",
     "prettier": "^2.8.7",
     "release-it": "^15.10.0",
     "rollup": "^3.25.3",
