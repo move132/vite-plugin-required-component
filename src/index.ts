@@ -38,7 +38,7 @@ export interface FileOptions {
 	 * 一个包含文件执行模式（glob patterns）的数组。
 	 * 这是一个可选属性，默认值为['./src/views/**\/*.vue']。
 	 */
-	execute?: string[]
+	include?: string[]
 
 	/**
 	 * 一个包含文件忽略模式（glob patterns）的数组。
@@ -47,22 +47,22 @@ export interface FileOptions {
 	ignore?: string[]
 }
 export async function createRequiredComponent(options: FileOptions = {}) {
-	const {debug = false, name = 'layout', baseUrl = './src', execute = ['./src/views/**/*.vue'], ignore = []} = options
+	const {debug = false, name = 'layout', baseUrl = './src', include = ['./src/views/**/*.vue'], ignore = []} = options
 	const option = {
 		debug,
 		name: name,
 		baseUrl,
-		execute,
+		include,
 		ignore: ignore.map((s) => getAbsolutePath(s.replace(/\//g, '\\')))
 	}
-	const files = await globby(option.execute)
+	const files = await globby(option.include)
 	const absolutePaths = files
 		.map((file: any) => {
 			return fs.realpathSync(file)
 		})
 		.filter((v: any) => {
 			// console.log(option.ignore.includes(v))
-			return !option.ignore.includes(v)
+			return !option.ignore.some((s) => v.includes(s))
 		})
 	if (option.debug) {
 		console.log(option, absolutePaths)
